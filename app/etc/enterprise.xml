@@ -34,12 +34,25 @@
                 <slab_size>1040000</slab_size>
             </frontend_options>
         </cache>
+
+
         <full_page_cache>
-            <backend>Mage_Cache_Backend_File</backend>
+            <backend>Cm_Cache_Backend_Redis</backend>
             <backend_options>
-                <cache_dir>full_page_cache</cache_dir>
+                <server>redis-cache</server>
+                <port>6379</port>
+                <database>0</database>
+                <force_standalone>0</force_standalone>
+                <automatic_cleaning_factor>0</automatic_cleaning_factor>
+                <compress_data>1</compress_data>
+                <compress_tags>1</compress_tags>
+                <compress_threshold>20480</compress_threshold>
+                <compression_lib>gzip</compression_lib>
             </backend_options>
         </full_page_cache>
+
+
+
         <skip_process_modules_updates>0</skip_process_modules_updates>
     </global>
 </config>
